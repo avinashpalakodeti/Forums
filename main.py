@@ -7,6 +7,7 @@ route = [
   webapp2.Route(r'/login', handler=home.Login),
   webapp2.Route(r'/signup', handler=home.Signup),
   webapp2.Route(r'/tags', handler=home.Tags),
+  webapp2.Route(r'/comments', handler=home.Comments)
   ]
 
 config = {}

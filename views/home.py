@@ -24,3 +24,7 @@ class Tags(BaseHandler):
 	def post(self):
 		tag = self.request.POST['tag']
 		self.render_response("tags.html",tag=tag)
+
+class Comments(BaseHandler):
+	def get(self):
+		self.render_response('comments.html')

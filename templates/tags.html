@@ -4,8 +4,16 @@
 	<link href="/static/css/bootstrap.css" rel="stylesheet">
 	</head>
 <body>
+<form action="/comment" method="post">
 <h4>list of topics</h4>
 <h5>${tag}</h5>
-<textarea> </textarea>
+<textarea name="comment"> </textarea>
+<input type="submit" value="comment"/>
+%for i in range(5):
+<div>
+<textarea></textarea>
+</div>
+%endfor
+</form>
 </body>
 </html>
