@@ -28,3 +28,7 @@ class Tags(BaseHandler):
 class Comments(BaseHandler):
 	def get(self):
 		self.render_response('comments.html')
+
+class Contact(BaseHandler):
+	def get(self):
+		self.render_response('contactus.html')

@@ -21,7 +21,7 @@ class SessionHandler(webapp2.RequestHandler):
 		return self.session_store.get_session() 
 
 
-allowed_routes = ["/login", "/signup","/","/tags","/comments"]
+allowed_routes = ["/login", "/signup","/","/tags","/comments","/contactus"]
 
 class BaseHandler(SessionHandler):
 

@@ -11,3 +11,8 @@ margin-left: 20px;
 #que{
     text-decoration: none;
 }
+
+#logout{
+	float:right;
+	margin-top: 45px;
+}
