@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <link href="/static/css/bootstrap.css" rel="stylesheet">
+  <script src="/static/js/jquery-1.9.0.min.js"></script>
+</head>
+<body>
+  <form class="well form-horizontal">
+    <fieldset>
+      <legend>Signup</legend>
+    <div class="control-group">
+    <label class="control-label" for="inputEmail"><em>*</em>   Email</label>
+    <div class="controls">
+    <input type="text" id="inputEmail" placeholder="Email"/>  <span></span>
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label" for="inputPassword"><em>*</em>   Password</label>
+    <div class="controls">
+    <input type="password" id="inputPassword" placeholder="Password"/>   <span></span>
+  </div>
+</div>
+<div class="control-group">
+  <div class="controls">
+        <input type="radio" class="gender" name="sex" value="male" style="margin-top: 0px;">Male
+        <input type="radio" class="gender" name="sex" value="female" style="margin-left: 12px;margin-top: 0px;">Female
+  </div>
+</div>
+    <div class="control-group">
+    <div class="controls">
+    <button type="submit" class="btn btn-success">Sign in</button>
+    </div>
+    </div>
+ 
+    </fieldset>
+  </form>
+  <script>
+$("form").submit(function() {
+if ($("input:text").val() == "") {
+  $("input:text").next('span').text("email should not be empty...").css('color','red').
+  show().fadeOut(3000);
+return false;
+}
+if ($("input:password").val() == "") {
+  $("input:password").next("span").text("password should not be empty...").css('color','red').show().fadeOut(3000);
+  return false;
+}
+});
+  </script>
+</body>
+</html>
