@@ -8,8 +8,9 @@ from cryptacular.crypt import CRYPTPasswordManager, SHA256CRYPT
 class User(db.Model):
 	password = db.StringProperty()
 	email = db.EmailProperty()
+	gender = db.StringProperty()
 
 	@classmethod
-	def create(cls,username,password):
-		u = cls(email=username,password=password)
+	def create(cls,username,password,gender):
+		u = cls(email=username,password=password,gender=gender)
 		u.put()

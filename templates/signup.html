@@ -27,8 +27,8 @@
 </div>
 <div class="control-group">
   <div class="controls">
-        <input type="radio" class="gender" name="sex" value="male" style="margin-top: 0px;">Male
-        <input type="radio" class="gender" name="sex" value="female" style="margin-left: 12px;margin-top: 0px;">Female
+        <input type="radio" class="gender" name="sex" value="male" id="test2" style="margin-top: 0px;">Male
+        <input type="radio" class="gender" name="sex" value="female" style="margin-left: 12px;margin-top: 0px;">Female<span></span>
   </div>
 </div>
     <div class="control-group">
@@ -48,6 +48,11 @@ return false;
 }
 if ($("input:password").val() == "") {
   $("input:password").next("span").text("password should not be empty...").css('color','red').show().fadeOut(3000);
+  return false;
+}
+if (!$("input[name='sex']:checked").val()) {
+  $("input:radio").next("span").text("gender should not be empty...").css('color','red')
+    .show().fadeOut(3000);
   return false;
 }
 });

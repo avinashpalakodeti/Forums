@@ -41,6 +41,7 @@ class Signup(BaseHandler):
 	def post(self):
 		username = self.request.POST['username']
 		passwor = self.request.POST['password']
+		gender = self.request.POST['sex']
 		manager = CRYPTPasswordManager(SHA256CRYPT)
 		password=manager.encode(passwor)
 				
@@ -52,7 +53,7 @@ class Signup(BaseHandler):
 				self.session.add_flash("Username already exists!",key='error')
 				self.redirect("/signup")
 			else:
-				User.create(username,password)
+				User.create(username,password,gender)
 				self.redirect("/login")
 		else:
 			self.session.add_flash("Enter valid email!",key='error')

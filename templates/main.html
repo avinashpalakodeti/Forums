@@ -1,19 +1,17 @@
 <%inherit file="layout.html"/>
-<div class="row" style="margin-left: 0px;">
+<div class="row" style="margin-left: 150px;">
 	<ul class="nav nav-list span3">
 	<h3> select ur topic</h3>
     <li><a href="/comments"> Python</a></li>
     <li><a href="/comments">Hadoop</a></li>
     <li><a href="/comments"> Java</a></li>
     </ul>
-    <div class="span6">
-    	<h2> ask a question</h2>
-   	<div>
-</div>
-<form action="/tags" method="post">
-<input type="text" name="tag">
-<input type="submit" value="submit">
-</form>
+    <div class="control-group">
+    <div class="controls">
+        <a href="/comments"> <button type="submit" class="btn btn-primary disabled"> create ur topic</button> </a>
+    </div>
+    </div>
+    </div>
 
 
 
