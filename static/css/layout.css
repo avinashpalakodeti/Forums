@@ -9,10 +9,6 @@ margin-left: 20px;
 text-decoration: none;
 }
 
-#que{
-    text-decoration: none;
-}
-
 #logout{
 	float:right;
 	margin-top: 45px;
@@ -36,4 +32,10 @@ body {
  margin-bottom: -35px; 
  margin-left: 30px;
  text-decoration: none;
+}
+
+.flash{
+    color:#FE2E64;
+    background-image: url('/static/images/brushed_alu.png');
+    text-align: center;
 }

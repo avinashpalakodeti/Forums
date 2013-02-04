@@ -2,22 +2,27 @@
 <html>
 <head>
   <link href="/static/css/bootstrap.css" rel="stylesheet">
+  <link href="/static/css/login.css" rel="stylesheet">
   <script src="/static/js/jquery-1.9.0.min.js"></script>
 </head>
 <body>
-  <form class="well form-horizontal">
+  %if session.has_key("error"):
+  <div class="flash">${session.get_flashes('error')[0][0]}</div>
+%endif
+  <form class="well form-horizontal" action="/signup" method="post">
     <fieldset>
       <legend>Signup</legend>
     <div class="control-group">
     <label class="control-label" for="inputEmail"><em>*</em>   Email</label>
     <div class="controls">
-    <input type="text" id="inputEmail" placeholder="Email"/>  <span></span>
+    <input type="text" id="inputEmail" placeholder="Email" name="username"/>  <span></span>
     </div>
     </div>
     <div class="control-group">
     <label class="control-label" for="inputPassword"><em>*</em>   Password</label>
     <div class="controls">
-    <input type="password" id="inputPassword" placeholder="Password"/>   <span></span>
+    <input type="password" id="inputPassword" placeholder="Password" name="password"/>   
+    <span></span>
   </div>
 </div>
 <div class="control-group">

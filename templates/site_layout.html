@@ -12,15 +12,6 @@
 	<a href="/" id="home" class="btn btn-link">Home</a>
 	<a href="#" id="questions" class="btn btn-link">Users</a>
 	<a class="btn btn-link" id="home" href="contactus">Contact Us</a>
-	%if session.has_key('current_user'):
- 					<h6>
-  						<a href="/logout">Logout</a> 
-					</h6> 
-					%else:
-					<h6>
-						<a href="/signup">Signup</a>
-					</h6>
-					%endif
 
 </div>
 
