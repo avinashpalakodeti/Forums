@@ -1,9 +1,9 @@
 <%inherit file="site_layout.html"/>
-<form action="/comment" method="post" style="margin-left: 300px;">
+<form action="/comment" method="post">
 <h4>the topic is</h4>
 <h5>${tag}</h5>
 <textarea name="comment"> </textarea>
-<input type="submit" value="comment"/>
+<a href="/comments"><button type="submit">comment</button></a>
 %for i in range(5):
 <div>
 <h1> Python</h1>
