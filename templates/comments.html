@@ -1,6 +1,10 @@
 <%inherit file="site_layout.html"/>
-	<form action="/tags" method="post">
-	<input type="text" style="margin-left:300px" name="tag">
-	<input type="submit" value="Comment">
-	</form>
-	
+<form action="/tags" method="post">
+<legend></legend>
+<div class="control-group">
+<input type="text"placeholder="Enter A Topic"name="tag">
+</div>
+<textarea name="comment"id="comments">Enter A Comment </textarea>
+<input type="submit" value="Comment">
+</form>
+<legend></legend>

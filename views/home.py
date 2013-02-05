@@ -72,6 +72,8 @@ class Main(BaseHandler):
 		self.render_response('main.html')
 
 class Tags(BaseHandler):
+	def get(self):
+		self.render_response('tags.html')
 	def post(self):
 		tag = self.request.POST['tag']
 		self.render_response("tags.html",tag=tag)

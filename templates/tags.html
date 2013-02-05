@@ -1,14 +1,17 @@
 <%inherit file="site_layout.html"/>
+<legend></legend>
 <form action="/comment" method="post">
-<h4>the topic is</h4>
+<h2>The Topic Is</h2>
+<legend></legend>
 <h5>${tag}</h5>
 <textarea name="comment"> </textarea>
-<a href="/comments"><button type="submit">comment</button></a>
+<a href="/comments"><button type="submit">Comment</button></a>
+<legend></legend>
 %for i in range(5):
 <div>
 <h1> Python</h1>
-<p> this is the comment</p>
-<hr>
+<p> This Is The Comment</p>
+<legend>
 </div>
 %endfor
 </form>
