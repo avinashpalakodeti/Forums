@@ -1,14 +1,18 @@
 <%inherit file="layout.html"/>
 <div class="row" style="margin-left: 150px;">
 	<ul class="nav nav-list span3">
-	<h3> select ur topic</h3>
-    <li><a href="/comments"> Python</a></li>
-    <li><a href="/comments">Hadoop</a></li>
-    <li><a href="/comments"> Java</a></li>
+	<h3> select ur tag</h3>
+    %for topic in topics:
+    <li><a href="/comments/create/${topic.key()}"> Python</a></li>
+    <li><a href="/comments/create/${topic.key()}">Hadoop</a></li>
+    <li><a href="/comments/create/${topic.key()}"> Java</a></li>
+    %endfor
     </ul>
-    <div class="control-group">
-    <div class="controls">
-        <a href="/comments"> <button type="submit" class="btn btn-primary disabled"> create ur topic</button> </a>
+    %if user:
+        
+        <a href="/topics/create"> <button type="submit" class="btn btn-primary disabled"> create ur touupic</button> </a>
+        
+    %endif
     </div>
     </div>
     </div>

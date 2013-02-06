@@ -5,7 +5,9 @@ from google.appengine.ext.webapp import blobstore_handlers
 from google.appengine.ext.blobstore import BlobInfo
 from cryptacular.crypt import CRYPTPasswordManager, SHA256CRYPT
 import urllib
-from models.user import User 
+from models.user import User
+from models.topics import Topic
+from models.comments import Comment
 import webapp2
 import re
 from webapp2_extras import json
@@ -69,16 +71,12 @@ class Logout(BaseHandler):
 
 class Main(BaseHandler):
 	def get(self):
-		self.render_response('main.html')
+		user = User.get(self.session['current_user'])
+		topics = [topic for topic in user.topic_set.run()]			
+		self.render_response('main.html',user=user,topics=topics)
 
-class Tags(BaseHandler):
-	def post(self):
-		tag = self.request.POST['tag']
-		self.render_response("tags.html",tag=tag)
-
-class Comments(BaseHandler):
-	def get(self):
-		self.render_response('comments.html')
+class TopicHandle(BaseHandler):
+	pass
 
 class Contact(BaseHandler):
 	def get(self):
