@@ -1,10 +1,16 @@
 <%inherit file="site_layout.html"/>
+<a href="/logout" style="float:right; margin-top: 40px;">Logout</a>
 <form action="/tags" method="post">
 <legend></legend>
 <div class="control-group">
-<input type="text"placeholder="Enter A Topic"name="tag">
+<label class="control-label" > Topic    
+<input type="text"  placeholder="Type your Topic"  name="tag">
+</label>
 </div>
-<textarea name="comment"id="comments">Enter A Comment </textarea>
-<input type="submit" value="Comment">
-</form>
+<textarea name="comment"id="comments" style=margin-left:40px>Enter A Comment </textarea>
+<div class="controls">
+<input type="submit" value="comment" class="btn btn-success" style="margin-left:100px"/>
+</div>
 <legend></legend>
+</div>
+</form>
