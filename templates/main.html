@@ -1,22 +1,26 @@
 <%inherit file="layout.html"/>
-<div class="row" style="margin-left: 150px;">
+<div class="row">
+    <hr>
 	<ul class="nav nav-list span3">
-	<h3> select ur tag</h3>
+	<h2> Topics</h2>
+    <hr>
     %for topic in topics:
-    <li><a href="/comments/create/${topic.key()}"> Python</a></li>
-    <li><a href="/comments/create/${topic.key()}">Hadoop</a></li>
-    <li><a href="/comments/create/${topic.key()}"> Java</a></li>
+    <li><a href="/comments/create/${topic.key()}"><h4> Python</a></li>
+    <hr>
+    <li><a href="/comments/create/${topic.key()}"><h4>Hadoop</a></li>
+    <hr>
+    <li><a href="/comments/create/${topic.key()}"><h4>Java</a></li>
+    <hr>
+    <li><a href="/comments/create/${topic.key()}"><h4>Fads</a></li>
+    <hr>
     %endfor
     </ul>
+    <div class="control-group">
+    <div class="controls">
     %if user:
-        
-        <a href="/topics/create"> <button type="submit" class="btn btn-primary disabled"> create ur touupic</button> </a>
-        
+    <a href="/topics/create"> <button type="submit" class="btn btn-primary disabled" style="margin-top:20px;margin-left:600px"> Create Topic</button> </a>
     %endif
     </div>
     </div>
+    <hr>
     </div>
-
-
-
-	

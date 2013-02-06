@@ -1,7 +1,19 @@
-<%inherit file="layout.html"/>
-	
-	<form action="/topics/create" method="post">
-	<input type="text" style="margin-left:400px" name="topic">
-	<input type="submit" value="button">
-	</form>
-	
+<%inherit file="site_layout.html"/>
+ <a href="/logout" style="float:right; margin-top:40px;">Logout</a>
+ <form action="/topics/create" method="post">
+ <hr>
+  <div class="control-group">
+   <label class="control-label"> Topic :   
+     <input type="text" name="tag"style="margin-left:50px;">
+   </label>
+  </div>
+ <label class="control-label"> Description:
+ <textarea name="comment"id="comments" style="margin-left:18px;"> </textarea>
+ <div class="controls">
+  <input type="submit" value="Create" class="btn btn-success" style="margin-left:100px"/>
+  <a href="/home"><input type="submit" value="Cancel" class="btn btn-danger" style="margin-left:30px"/></a>
+ </div>
+ <hr>
+ </div>
+ </form>
+ 

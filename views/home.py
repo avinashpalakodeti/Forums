@@ -75,8 +75,21 @@ class Main(BaseHandler):
 		topics = [topic for topic in user.topic_set.run()]			
 		self.render_response('main.html',user=user,topics=topics)
 
+
 class TopicHandle(BaseHandler):
 	pass
+
+class Tags(BaseHandler):
+	def get(self):
+		self.render_response('tags.html')
+	def post(self):
+		tag = self.request.POST['tag']
+		self.render_response("tags.html",tag=tag)
+
+class Comments(BaseHandler):
+	def get(self):
+		self.render_response('comments.html')
+
 
 class Contact(BaseHandler):
 	def get(self):
