@@ -20,5 +20,6 @@ class Create(BaseHandler):
 	def post(self):
 		user = User.get(self.session['current_user'])
 		topic = self.request.POST['topic']
-		Topic.create(user,topic)
-		self.render_response('comments.html')
+		desc = self.request.POST['description']
+		Topic.create(user,topic,desc)
+		self.redirect('/')

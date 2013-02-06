@@ -11,8 +11,8 @@ class Topic(db.Model):
 
 
 	@classmethod
-	def create(cls,user,topic):
-		 b = cls(user=user,name=topic)
+	def create(cls,user,topic,desc):
+		 b = cls(user=user,name=topic,description=desc)
 		 b.put()
 
 	@classmethod

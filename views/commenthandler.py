@@ -22,4 +22,4 @@ class Create(BaseHandler):
 		user = User.get(self.session['current_user'])
 		comment = self.request.POST['comment']
 		Comment.create(user,comment,topic)
-		self.render_response('comments.html')
+		self.redirect('/')
