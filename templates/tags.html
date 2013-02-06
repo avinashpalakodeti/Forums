@@ -1,18 +1,18 @@
 <%inherit file="site_layout.html"/>
 <a href="/logout" style="float:right; margin-top: 40px;">Logout</a>
-<legend></legend>
+<hr>
 <form action="/comments" method="post">
-<h2>The Topic Is</h2>
-<legend></legend>
+<h2> Topic Name </h2>
+<hr>
 <h5>${tag}</h5>
 <textarea name="comment"> </textarea>
 <button type="submit" class="btn btn-success">Comment</button>
-<legend></legend>
-%for i in range(5):
+<hr>
+%for i in range(3):
 <div>
-<h1> Python</h1>
+<h4> Python</h4>
 <p> This Is The Comment</p>
-<legend>
+<hr>
 </div>
 %endfor
 </form>
