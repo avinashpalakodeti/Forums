@@ -5,13 +5,7 @@
 	<h2> Topics</h2>
     <hr>
     %for topic in topics:
-    <li><a href="/comments/create/${topic.key()}"><h4> Python</a></li>
-    <hr>
-    <li><a href="/comments/create/${topic.key()}"><h4>Hadoop</a></li>
-    <hr>
-    <li><a href="/comments/create/${topic.key()}"><h4>Java</a></li>
-    <hr>
-    <li><a href="/comments/create/${topic.key()}"><h4>Fads</a></li>
+    <li><a href="/comments/create/${topic.key()}"><h4> ${topic.name}</a></li>
     <hr>
     %endfor
     </ul>

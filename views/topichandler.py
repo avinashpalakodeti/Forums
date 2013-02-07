@@ -23,3 +23,4 @@ class Create(BaseHandler):
 		desc = self.request.POST['description']
 		Topic.create(user,topic,desc)
 		self.redirect('/')
+

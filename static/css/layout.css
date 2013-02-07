@@ -63,3 +63,8 @@ body {
  width: 1px;
  height: 100%;
  }
+
+ #username{
+    float:right;
+    margin-left: 25px;
+ }

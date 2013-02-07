@@ -9,6 +9,7 @@ class Comment(db.Model):
 	comment = db.TextProperty()
 	user = db.ReferenceProperty(User)
 	topic =db.ReferenceProperty(Topic)
+	created_at = db.DateTimeProperty(auto_now=True)
 
 	@classmethod
 	def create(cls,userkey,topic,topickey):

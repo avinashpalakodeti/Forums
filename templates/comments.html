@@ -4,14 +4,15 @@
 <form action="/comments/create/${topic.key()}" method="post">
 <h2> Topic Name </h2>
 <hr>
-<h5> </h5>
-<textarea name="comment"></textarea>
+<h5> ${topic.name}</h5>
+<textarea name="comment"> </textarea>
 <button type="submit" class="btn btn-success">Comment</button>
 <hr>
-%for i in range(3):
-<div>
-<h4> Python</h4>
-<p> This Is The Comment</p>
+%for i in comments:
+<div class="span10">
+<h4> ${topic.name}</h4><h6 id="username"> ${i.user.email}</h6>
+<h6 id="username"> ${i.created_at} </h6>
+<p> ${i.comment}</p>
 <hr>
 </div>
 %endfor

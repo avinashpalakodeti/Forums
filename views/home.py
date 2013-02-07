@@ -72,7 +72,7 @@ class Logout(BaseHandler):
 class Main(BaseHandler):
 	def get(self):
 		user = User.get(self.session['current_user'])
-		topics = [topic for topic in user.topic_set.run()]			
+		topics = Topic.all()			
 		self.render_response('main.html',user=user,topics=topics)
 
 
