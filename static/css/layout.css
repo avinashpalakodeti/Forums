@@ -15,7 +15,7 @@ text-decoration: none;
 }
 
 html {
-    background-color: #ccc;
+    background-color: #3BB9FF;
     height: 100%;
    }
 body {
@@ -38,7 +38,7 @@ body {
     text-align: center;
    }  
 .box{
- background-color: #FFFAF0;
+ background-color: #F52887;
  font-family: arial;  
  border: 1px;
  border-style: solid;
