@@ -4,7 +4,7 @@
   <link href="/static/css/bootstrap.css" rel="stylesheet">
   <link href="/static/css/login.css" rel="stylesheet">
   <script src="/static/js/jquery-1.9.0.min.js"></script>
-
+  <link rel='stylesheet' href='/static/css/layout.css'>
 </head>
 <body>
   %if session.has_key("error"):
@@ -12,10 +12,12 @@
 %endif
   <form class="well form-horizontal" action="login" method="post">
     <fieldset>
-      <a href="signup" class="btn btn-large btn-primary disabled" style="float:right;margin-top:30px">Signup</a>
-      <hr>
-      Login
-      <hr>
+      <div class="signuphtml">
+    <hr style="border-color:black">
+    <a href="signup" class="btn btn-large btn-primary disabled" style="float:right;margin-top:45px">Signup</a>
+    LOGIN
+      <hr style="border-color:black">
+    </div>
     <div class="control-group">
     <label class="control-label" for="inputEmail"><em>*</em>   Email</label>
     <div class="controls">

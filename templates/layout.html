@@ -7,8 +7,8 @@
 	<link rel='stylesheet' href='/static/css/layout.css'>
 
 </head>
-<body class="box" background="/static/css/11.jpeg">
-	<div class="container">
+<body class="box" background="/static/css/102.png">
+	<div class="container">	
 	<a href="/" id="home" class="btn btn-link">Home</a>
 	<a href="#" id="questions" class="btn btn-link">Users</a>
 	%if session.has_key('current_user'):
@@ -17,8 +17,9 @@
 					<h6>
 						<a href="/signup">Signup</a>
 					</h6>
-					%endif
-${self.body()}
-</div>
+	%endif
+	${self.body()}
+				
+   </div>
 </body>
 </html>

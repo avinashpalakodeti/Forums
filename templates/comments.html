@@ -6,15 +6,38 @@
 <hr>
 <h5> ${topic.name}</h5>
 <h5> </h5>
-<textarea name="comment"style="width: 380px; height: 150px;"></textarea>
-<button type="submit" class="btn btn-success">Comment</button>
+<textarea name="comment"style="width: 380px; height: 150px; border-color:#FF66FF"></textarea>
+<button type="submitbutton" class="btn btn-success" >Comment</button>   
 <hr>
-%for i in comments:
-<div class="span10">
-<h4> ${topic.name}</h4><h6 id="username"> ${i.user.email}</h6>
+ <ol id="paginator" >
+        <li class="previous-off" style="margin-left:645px;"> Previous</li>
+        <li class="active">1</li>
+        <li><a href="page=2">2</a></li>
+        <li><a href="page=3">3</a></li>
+        <li><a href="page=4">4</a></li>
+        <li><a href="page=5">5</a></li>
+        <li><a href="page=6">6</a></li>
+        <li><a href="page=7">7</a></li>
+        <li><a href="page=8">8</a></li>
+        <li class="next"><a href="page=2">Next </a></li>
+  </ol>
+ %for i in comments:
+<h4> ${topic.name}</h4> 
+<h6 id="username"> ${i.user.email}</h6>
 <h6 id="username"> ${i.created_at} </h6>
-<p> ${i.comment}</p>
-<hr>
-</div>
+<p class="comment"> ${i.comment}</p>
+<hr style="border-color:black">
 %endfor
+     <ol id="paginator" >
+        <li class="previous-off" style="margin-left:320px;"> Previous</li>
+        <li class="active">1</li>
+        <li><a href="page=2">2</a></li>
+        <li><a href="page=3">3</a></li>
+        <li><a href="page=4">4</a></li>
+        <li><a href="page=5">5</a></li>
+        <li><a href="page=6">6</a></li>
+        <li><a href="page=7">7</a></li>
+        <li><a href="page=8">8</a></li>
+        <li class="next"><a href="page=2">Next </a></li>
+     </ol>
 </form>

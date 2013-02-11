@@ -15,7 +15,7 @@ text-decoration: none;
 }
 
 html {
-    background-image:url(/static/css/100.jpg);
+    background:#484848;
     height: 100%;
    }
 body {
@@ -38,16 +38,30 @@ body {
     text-align: center;
    }  
 .box{
- background-color: #F52887;
+ background-color:;
  font-family: arial;  
- border: 1px;
+ border: 2px;
  border-style: solid;
  border-color: #800;
  padding: 5px;
  margin: 50px;
  width: 1180px;
- height: 50px;
+ height: 2500px;
  }
+.comment{
+background: none repeat scroll 0 0 #FAFAFA;
+padding: 0 20px;
+line-height: 33px;
+font-family: 'Droid Sans',sans-serif;
+font-weight: 700;
+font-size: 15px;
+border-color: #FF66FF;
+border-radius: 5px 5px 0 0;
+border-style: solid;
+border-width: 1px 1px 1px;
+color: black;
+}
+}
 .text {
  display: inline;
  font-size: 12px;
@@ -56,15 +70,65 @@ body {
  margin: 20px;
  width: 150px;
  }   
-
 .vertical-line {
  display: inline;
  background-color: #000;
  width: 1px;
  height: 100%;
  }
+ul{border:0; margin:0; padding:0;}
 
+#paginator li{
+border:0; margin:0; padding:0;
+font-size:11px;
+list-style:none;
+}
+#paginator a{
+border:solid 1px #DDDDDD;
+margin-right:2px;
+}
+#paginator .previous-off,
+#paginator .next-off {
+color:#666666;
+display:block;
+float:left;
+font-weight:bold;
+padding:3px 4px;
+}
+#paginator .next a,
+#paginator .previous a {
+font-weight:bold;
+border:solid 1px #FFFFFF;
+}
+#paginator .active{
+color:#ff0084;
+font-weight:bold;
+display:block;
+float:left;
+padding:4px 6px;
+}
+#paginator a:link,
+#paginator a:visited {
+color:#0063e3;
+display:block;
+float:left;
+padding:3px 6px;
+text-decoration:none;
+}
+#paginator a:hover{
+border:solid 1px #666666;
+}
+ 
  #username{
-    float:right;
-    margin-left: 25px;
+ float:right;
+ margin-left: 15px;
+ width: 165px;
  }
+ .signuphtml
+{
+background: #282828;
+text-align: center;
+padding: 0 5px;
+color: white;
+font-size: 25px;
+}
